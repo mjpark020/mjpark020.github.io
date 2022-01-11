@@ -9,6 +9,21 @@ a {
     text-decoration: none;
 }
 
+h2 {
+    font-size: 40px;
+    margin-bottom: 80px;
+}   
+
+section:not(:nth-of-type(1)) {
+    text-align: center;
+    padding: 100px;
+    
+}
+
+section:nth-of-type(odd) {
+    background-color: rgb(240, 240, 240);
+}
+
 nav {
     height: 100px;
     width: 100%;
@@ -20,9 +35,9 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    -webkit-transition: height 2s;
-    -moz-transition: height 2s;
-    transition: all 1s;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    transition: all 0.5s;
 }
 
 nav.roll {
@@ -44,7 +59,7 @@ nav div span a {
     font-size: 42px;
     font-weight: bold;
     color: #01f8d7;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 nav.roll div span a {
@@ -68,7 +83,7 @@ nav ul li{
 
 #top > div {
     position: absolute;
-    top: 250px;
+    top: 30%;
     left: 50%;
     transform: translate(-50%);
     color: white;
@@ -104,18 +119,7 @@ button {
     font-weight: bold;
 }
 
-#introduce {
-    text-align: center;
-    padding: 100px;
-}
-
-#introduce h2 {
-    font-size: 40px;
-}
-
 #introduce .cont {
-    margin-top: 80px;
-    width: 1000px;
     display: grid;
     grid-template-columns: 50% 50%;
     text-align: left;
@@ -124,16 +128,15 @@ button {
 #introduce .cont #info {
     width: 100%;
     border-right: 1px solid gray;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    text-align: right;
 }
 
 #introduce .cont #info div {
-    width: 300px;
-    margin: 10px;
+    width: 220px;
+    margin: 10px 0;
+    display: inline-block;
     text-align: left;
+    margin-right: 50px;
 }
 
 #introduce .cont #info div span:first-child {
@@ -150,7 +153,27 @@ button {
     margin: 10px;
 }
 
-#portfolio {
-    text-align: center;
-    background-color: rgb(240, 240, 240);
+#portfolios {
+    
+    
+}
+
+#portfolios #portfolio_frame {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+#portfolios .portfolio {
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    border: 1px solid black;
+}
+
+#portfolios .portfolio img {
+    width: 300px;
+    height: 250px;
 }
