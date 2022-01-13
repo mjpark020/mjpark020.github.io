@@ -95,7 +95,7 @@ nav button {
 }
 
 #top button {
-    display: none;
+    display: none !important;
 }
 
 @media (min-height: 814px) {
