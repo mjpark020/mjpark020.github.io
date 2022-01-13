@@ -4,13 +4,17 @@
     <meta charset="utf-8">
     <title>title here</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width:982px)" />
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:982px)" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <script src="js/scroll.js"></script>
 </head>
 <body>
   <nav>
     <div>
-      <span id="title"><a href="mjpark020.github.io">Park Minju's portfolio</a></span>
+      <span id="title"><a href="http://mjpark020.github.io">Park Minju's project</a></span>
+      <button class="menu">MENU</button>
       <ul>
         <li>TOP</li>
         <li>INTRODUCE</li>
@@ -23,7 +27,7 @@
 
   <section id="top">
     <div>
-      <div>Welcome to my portfolio!</div>
+      <div>Welcome to my project!</div>
       <div>NICE TO MEET YOU</div>
       <button>SCROLL DOWN</button>
     </div>
@@ -68,37 +72,83 @@
     <h2>SKILLS</h2>
     <div id="skill_frame">
       <div class="skill">
-        <div class="skill_img"><img src="#"></div>
+        <div class="skill_img"><img src="img/html.jpg"></div>
+        <p>html5</p>
+      </div>
+
+      <div class="skill">
+        <div class="skill_img"><img src="img/css.jpg"></div>
+        <p>css3</p>
+      </div>
+
+      <div class="skill">
+        <div class="skill_img"><img src="img/js.jpg"></div>
+        <p>JavaScript</p>
+      </div>
+
+      <div class="skill">
+        <div class="skill_img"><img src="img/jquery.png"></div>
+        <p>jquery</p>
+      </div>
+
+      <div class="skill">
+        <div class="skill_img"><img src="img/java.png"></div>
+        <p>Java</p>
+      </div>
+
+      <div class="skill">
+        <div class="skill_img"><img src="img/oracle_db.png"></div>
+        <p>Oracle Database</p>
+      </div>
+
+      <div class="skill">
+        <!-- <div>아이콘 제작자 <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></div> -->
+        <div class="skill_img"><img src="img/jsp.png"></div>
+        <p>JSP / Servlet</p>
+      </div>
+
+      <div class="skill">
+        <div class="skill_img"><img src="img/spring.png"></div>
+        <p>Spring</p>
       </div>
     </div>
 
   </section>
 
-  <section id="portfolios">
-    <h2>PORTFOLIO</h2>
-    <div id="portfolio_frame">
-      <div class="portfolio">
-        <img src="#">
+  <section id="projects">
+    <h2>PROJECTS</h2>
+
+    <div id="project_frame">
+
+      <div class="project">
+        <div class="project_img">
+          <div class="cross">
+            <div class="cross_vertical"></div>
+            <div class="cross_horizen"></div>
+          </div>
+          <img src="img/css.jpg">
+        </div> <!-- project_img -->
         <div>
-          <h3>제목</h3>
-          <p>설명</p>
+          <h3>도서대출 프로그램</h3>
+          <p>자바 swing으로 구현했습니다.</p>
         </div>
       </div>
-      <div class="portfolio">
-        <img src="#">
+
+      <div class="project">
+        <div class="project_img">
+          <div class="cross">
+            <div class="cross_vertical"></div>
+            <div class="cross_horizen"></div>
+          </div>
+          <img src="#">
+        </div><!-- project_img -->
         <div>
-          <h3>제목</h3>
-          <p>설명</p>
+          <h3>TripTrip</h3>
+          <p>API를 이용한 여행정보사이트입니다.</p>
         </div>
       </div>
-      <div class="portfolio">
-        <img src="#">
-        <div>
-          <h3>제목</h3>
-          <p>설명</p>
-        </div>
-      </div>
+      
   </div> <!-- frame -->
-  </section> <!-- portfolios -->
+  </section> <!-- projects -->
 </body>
 </html>
