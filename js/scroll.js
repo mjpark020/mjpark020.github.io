@@ -2,23 +2,43 @@
 var menuOn = false;
 
 // 반응형 화면 크기
-var windowWidth = window.matchMedia("screen and (max-width: 982px)");
+var windowWidth = window.matchMedia("screen and (max-width: 1017px)");
+
+// 현재 스크롤 위치
+function getCurrentScroll() {
+  return window.pageYOffset || document.documentElement.scrollTop;
+}
+
 
 // 메뉴 클릭 함수
 function menuOnClick() {
   if(windowWidth.matches) {
-    if(menuOn) {
-      $('nav ul').css({"display":"block"});
+    if (menuOn) {
+      //$('nav ul').css({"display":"block"});
+      $('nav ul').slideDown(500);
       $('nav').css({
         "height": "50px",
         "background-color": "#333"
       });
+      $('nav ul li').css({ "margin": "0" });
     } else {
-      $('nav ul').css({"display":"none"});
-      $('nav').css({
-        "height": "100px",
-        "background-color": "transparent"
+      //$('nav ul').css({"display":"none"});
+      $('nav ul').slideUp(500, function () {
+        $('nav ul li').css({ "margin": "0 50px" });
+
+        if (getCurrentScroll() >= 100) {
+          $('nav').css({
+            "height": "50px",
+            "background-color": "#333"
+          });
+        } else {
+          $('nav').css({
+            "height": "100px",
+            "background-color": "transparent"
+          });
+        }
       });
+
     }
   }
 }
@@ -39,9 +59,7 @@ $(function () {
       $('nav').removeClass('roll');
     }
   });
-  function getCurrentScroll() {
-    return window.pageYOffset || document.documentElement.scrollTop;
-  }
+  
 
 
   ///////////////////////////////////////////////////////
