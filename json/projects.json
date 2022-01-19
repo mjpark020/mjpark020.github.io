@@ -2,11 +2,12 @@
     {
         "name": "전자도서관 프로그램",
         "skill": [
-            "Java"
+            "Java",
+            "Oracle DB"
         ],
         "explain": "스윙을 사용하여 만든 도서관 관리 프로그램입니다. ",
         "video":"video/Lib.mp4",
-        "github":"준비중"
+        "github":"https://github.com/mjpark020/Lib"
     },
     {
         "name": "TripTrip",
@@ -16,8 +17,8 @@
             "Oracle DB"
         ],
         "explain": "Open API를 사용하여 만든 여행지 정보 사이트입니다.",
-        "video":"준비중",
-        "github":"준비중"
+        "video":"video/TripTrip.mp4",
+        "github":"https://github.com/mjpark020/TripTrip"
         
     }
 ]
