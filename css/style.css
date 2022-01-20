@@ -103,6 +103,32 @@ nav ul li{
 
 /* //////////////////////////////////// */
 /* introduce */
+#introduce h2:hover, #introduce img:hover {
+    cursor: pointer;
+}
+
+#introduce h2:hover .balloon {
+    display: block;
+}
+
+#introduce img {
+    width: 30px;
+    height: 30px;
+}
+
+#introduce .balloon {
+    font-size: 0.4em;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    background-color: #01f8d7;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 #introduce .cont {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -137,6 +163,17 @@ nav ul li{
     margin: 10px;
 }
 
+#introduce .more-intro {
+    width: 750px;
+    margin-top: 50px;
+    display: none;
+    text-align: left;
+}
+
+#introduce .more-intro span {
+    color:#00d4b8;
+}
+
 /* //////////////////////////////////// */
 /* skills */
 #skills #skill_frame {
@@ -153,6 +190,8 @@ nav ul li{
     font-size: 20px;
     transition: all 1s;
     margin: 30px;
+    position: relative;
+    cursor: pointer;
 }
 
 #skills .skill:hover {
@@ -178,6 +217,38 @@ nav ul li{
     height: 95%;
     
 }
+
+#skills .skill .skill-info {
+    width: 260px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    bottom: 115%;
+    transform: translate(-50%);
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: none;
+    text-align: left;
+    padding: 5px;
+}
+
+#skills .skill .skill-info-tri {
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid whitesmoke;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#skills .skill-info ul li{
+   list-style-type: disc;
+   margin-left: 24px;
+}
+
 /* //////////////////////////////////// */
 /* projects */
 #projects #project_frame {
@@ -187,7 +258,7 @@ nav ul li{
 }
 
 #projects .project {
-    width: 300px;
+    width: 350px;
     height: 300px;
     margin: 30px;
 }

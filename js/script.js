@@ -61,7 +61,7 @@ $.ajax({
       html += '<p><br>' + value.explain + '</p><br><br>';
       
       //github
-      html += '<a href="' + value.github + '">깃허브 링크</a>';
+      html += '<a href="' + value.github + '" target="_blank">깃허브 링크</a>';
       
       arrProjects.push(html);
       
@@ -134,7 +134,29 @@ $(function () {
     document.getElementById('introduce').scrollIntoView({behavior: "smooth", block: "center"});
   });
 
+
+  ///////////////////////////////////////////////////////
+  // introduce modal
+  $('#introduce h2').on('click', function() {
+    $('#introduce .more-intro').toggle(300);
+  });
+
   
+  ///////////////////////////////////////////////////////
+  // skills info
+  var preIdx = 0;
+  $('#skills .skill').on('click', function() {
+    var idx = $(this).index();
+    if(idx == preIdx) {
+      $('#skills .skill-info').eq(idx).toggle(300);
+    } else {
+      $('#skills .skill-info').hide(300);
+      $('#skills .skill-info').eq(idx).show(300);
+    }
+    preIdx = idx;
+  });
+
+
 
   ///////////////////////////////////////////////////////
   // project 상세 모달
