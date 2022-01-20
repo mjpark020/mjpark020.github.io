@@ -151,7 +151,26 @@ nav.menuOn li {
 
 /* //////////////////////////////////// */
 /* skills */
+#skills #skill_frame {
+    width: 100%;
+}
 
+#skills .skill {
+    width: 200px;
+    height: 200px;
+    font-size: 1em;
+    margin: 50px 20px;
+}
+
+#skills .skill:hover .skill_img{
+    width: 180px;
+    height: 180px;
+}
+
+#skills .skill_img {
+    width: 160px;
+    height: 160px;
+}
 
 /* //////////////////////////////////// */
 /* projects */
